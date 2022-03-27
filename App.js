@@ -7,21 +7,27 @@
  */
 
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import Registration from './src/Registration';
+import Amplify from 'aws-amplify';
+import config from './src/aws-exports';
+//may use firebase also. 
+
+Amplify.configure(config);
 
 const App = () => {
+  // Auth.signOut();
   return (
-    <View style={styles.screen}>
-      <Text>Hello World!</Text>
-    </View>
+    <SafeAreaView style={styles.root}>
+      <Registration />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  screen: {
+  root: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#F9FBFC',
   },
 });
 
