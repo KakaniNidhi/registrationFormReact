@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, TextInput, StyleSheet} from 'react-native';
 
-const CustomInput = ({control, name, placeholder, secureTextEntry}) => {
+const CustomInput = ({control, name, placeholder, keyboardType, secureTextEntry}) => {
     return(
         <View style={styles.screen}>
             <Controller 
@@ -14,6 +14,7 @@ const CustomInput = ({control, name, placeholder, secureTextEntry}) => {
                         onBlur={onBlur}
                         placeholder={placeholder}
                         style={styles.input}
+                        keyboardType={keyboardType}
                         secureTextEntry={secureTextEntry}
                     />
                 )}

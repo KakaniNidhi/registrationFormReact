@@ -65,6 +65,7 @@ const Registration = () => {
             name="contact"
             control={control}
             placeholder="Mobile no."
+            keyboardType='numeric'
             rules={{
                 required: 'Mobile no. with std code "+91" is required',
                 minLength: {
