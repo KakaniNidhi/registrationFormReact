@@ -1,16 +1,16 @@
 import React from 'react';
-import {Text, StyleSheet, Pressable} from 'react-native';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const myButton = ({onPress, text}) => {
     return (
-        <Pressable
+        <TouchableOpacity
         onPress={onPress}
         style={[styles.container]}>
         <Text
             style={[styles.text ]}>
             {text}
         </Text>
-        </Pressable>
+        </TouchableOpacity>
     );
 };
 
