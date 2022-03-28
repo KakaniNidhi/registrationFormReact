@@ -20,7 +20,7 @@ const Registration = () => {
     //console.log(data);
         const {name, email, contact, password, gender} = data;
         try {
-        await Auth.Register({
+        await Auth.signUp({
             name,
             password,
             attributes: {email, contact, gender},
